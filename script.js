@@ -6,5 +6,6 @@
     "remove": "rm -rf node_modules && cd ios && rm -rf Pods && rm -rf build && rm -rf Podfile.lock && cd .. && yarn run re_install",
     "iphone_se_start": "react-native run-ios --simulator='iPhone SE'",
     "make_app_icon": "react-native set-icon --path [path-to-image] --background [\"color\"]",
-    "make_splash": "react-native set-splash --path [path-to-image] --resize [contain|cover|center] --background [\"background-color\"]"
+    "make_splash": "react-native set-splash --path [path-to-image] --resize [contain|cover|center] --background [\"background-color\"]",
+    "project_rename": "react-native-rename <newName>"
 }
