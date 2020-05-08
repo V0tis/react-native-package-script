@@ -18,7 +18,7 @@ Project Rename -> yarn global add react-native-rename 설치 후 진행
     "projectRename": "react-native-rename <newName>",
     "androidDebugBuild": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android/ && ./gradlew assembleDebug && open app/build/outputs/apk/",
     "makeBundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
-    "androidReleaseBuild": "yarn run make_bundle && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && yarn run make_splash && cd android && ./gradlew assembleRelease && cd ..",
+    "androidReleaseBuild": "yarn run make_bundle && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && yarn run makeSplash && cd android && ./gradlew assembleRelease && cd ..",
     "podInstall": "cd ios && pod install && cd ..",
     "clean": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start -- --reset-cache"
 
