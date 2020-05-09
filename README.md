@@ -10,10 +10,10 @@ Project Rename -> yarn global add react-native-rename 설치 후 진행
 
 { 
     "makeSplash": "react-native set-splash --path src/assets/images/splash.png --resize cover",
-    "device": "react-native run-ios --device '정동건의 iPhone Xs Max'",
-    "reInstall": "yarn && cd ios && pod install && yarn run iphone_se_start",
+    "ios:device": "react-native run-ios --device '정동건의 iPhone Xs Max'",
+    "ios:install": "yarn && cd ios && pod install",
     "remove": "rm -rf node_modules && cd ios && rm -rf Pods && rm -rf build && rm -rf Podfile.lock && cd .. && yarn run re_install",
-    "iphoneSeStart": "react-native run-ios --simulator='iPhone SE'",
+    "ios:se": "react-native run-ios --simulator='iPhone SE'",
     "makeAppIcon": "react-native set-icon --path [path-to-image] --background [\"color\"]",
     "projectRename": "react-native-rename <newName>",
     "android:debug": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android/ && ./gradlew assembleDebug && open app/build/outputs/apk/",
