@@ -16,9 +16,9 @@ Project Rename -> yarn global add react-native-rename 설치 후 진행
     "iphoneSeStart": "react-native run-ios --simulator='iPhone SE'",
     "makeAppIcon": "react-native set-icon --path [path-to-image] --background [\"color\"]",
     "projectRename": "react-native-rename <newName>",
-    "androidDebugBuild": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android/ && ./gradlew assembleDebug && open app/build/outputs/apk/",
-    "makeBundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
-    "androidReleaseBuild": "yarn run make_bundle && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && yarn run makeSplash && cd android && ./gradlew assembleRelease && cd ..",
+"android:debug": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android/ && ./gradlew assembleDebug && open app/build/outputs/apk/",
+    "android:bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "android:release": "yarn run android:bundle && rm -rf android/app/src/main/res/drawable-* && rm -rf android/app/src/main/res/raw/* && yarn run makeSplash && cd android && ./gradlew clean && ./gradlew assembleRelease && cd ..",
     "podInstall": "cd ios && pod install && cd ..",
     "clean": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && yarn start -- --reset-cache"
 
