@@ -14,6 +14,7 @@ Project Rename -> yarn global add react-native-rename 설치 후 진행
     "ios:install": "yarn && cd ios && pod install",
     "remove": "rm -rf node_modules && cd ios && rm -rf Pods && rm -rf build && rm -rf Podfile.lock && cd .. && yarn run re_install",
     "ios:se": "react-native run-ios --simulator='iPhone SE'",
+    "ios:8": "react-native run-ios --simulator='iPhone 8'",
     "makeAppIcon": "react-native set-icon --path [path-to-image] --background [\"color\"]",
     "projectRename": "react-native-rename <newName>",
     "android:debug": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android/ && ./gradlew assembleDebug && open app/build/outputs/apk/",
