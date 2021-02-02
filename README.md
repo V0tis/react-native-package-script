@@ -1,4 +1,4 @@
-# utaha-package-script-react-native
+# react-native-package-script
 
 Splash or App Icon ->  yarn add -D @bam.tech/react-native-make 설치 후 진행
 
